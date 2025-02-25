@@ -1,31 +1,28 @@
-'use client'
+'use client';
 import useGetQuery from '@/data/queryprovider/useGetQuery';
 
-
 const Headertitle = () => {
-  const  post: {
+  const post: {
     title: string;
     body: string;
     excerpt: string;
     image: string;
     slug: string;
     cat_title: string;
-  }[] = useGetQuery('post','/post') || [] 
+  }[] = useGetQuery('post', '/post') || [];
 
-  const sliderCaption = Object.values(post)
-    .filter((v) => {
-      return v.slug === 'spotless-cleaning-at-your-doorstep';
-    })
-    .map((vl, k) => (
-      <div key={k} className="headeer-title">
-        <h1>{vl.title}</h1>
-        <div>
-        {vl.excerpt}
-        </div>
+  const res = Object.values(post).filter((v) => {
+    return v.slug === 'spotless-cleaning-at-your-doorstep';
+  });
+
+  return (
+    <div className="headeer-title">
+      <div>
+      <h1>CLEANING SERVICES IN GHANA</h1>
+      <div>You can count oun us for all your cleaning services</div>
       </div>
-    ));
-
-  return <>{sliderCaption}</>;
+    </div>
+  );
 };
 
 export default Headertitle;
