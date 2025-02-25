@@ -1,35 +1,50 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Nav = () => {
+  const [getScroll, setScroll] = useState('hide');
+  const [showmenu, setShowmenu] = useState('hide');
+
   useEffect(() => {
     window.addEventListener('scroll', windowScroll);
-    return ()=> window.removeEventListener('scroll', windowScroll);
+    return () => window.removeEventListener('scroll', windowScroll);
   }, []);
 
   const windowScroll = () => {
-    const scroll = window.scrollY 
-    console.log(scroll)
+    const scroll = Math.floor(window.scrollY);
+    if (scroll > 40) {
+      setScroll('show');
+    } else {
+      setScroll('hide');
+    }
   };
 
   return (
-    <nav>
-      <div className="container">
+    <nav className={`navbar ${getScroll}`}>
+      <div className={`container menubox ${showmenu}`}>
         <div>
           <Link href="/">
-            <Image width="200" height="70" src="/logo.png" alt="" />
+            <Image
+              onClick={() => setShowmenu('hide')}
+              width="200"
+              height="70"
+              src="/logo.png"
+              alt=""
+            />
           </Link>
         </div>
         <div>
           <ul>
             <li className="active">
-              <Link href="/">Home</Link>
+              <Link onClick={() => setShowmenu('hide')} href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="!#">About Us</Link>
-              <ul>
+              <Link href="/#">About Us</Link>
+              <ul onClick={() => setShowmenu('hide')}>
                 <li>
                   <Link href="/team">Our Team</Link>
                 </li>
@@ -49,8 +64,8 @@ const Nav = () => {
               </ul>
             </li>
             <li>
-              <Link href="!#">Products</Link>
-              <ul>
+              <Link href="/#">Products</Link>
+              <ul onClick={() => setShowmenu('hide')}>
                 <li>
                   <Link href="/detergents">Detergents</Link>
                 </li>
@@ -64,22 +79,37 @@ const Nav = () => {
             </li>
 
             <li>
-              <Link href="/services">Services</Link>
+              <Link onClick={() => setShowmenu('hide')} href="/services">
+                Services
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link onClick={() => setShowmenu('hide')} href="/contact">
+                Contact
+              </Link>
             </li>
             <li className="getquote">
-              <Link href="/contact">Get a free quote</Link>
+              <Link onClick={() => setShowmenu('hide')} href="/contact">
+                Get a free quote
+              </Link>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="container"></div>
+      <div
+        onClick={() => setShowmenu('hide')}
+        className={`backshadow ${showmenu}`}
+      ></div>
       <div className="humberger">
         <div>
-          <Image src="/hamburger-icon.png" alt="" width="20" height="20" />
+          <Image
+            src="/hamburger-icon.png"
+            alt=""
+            width="20"
+            height="20"
+            onClick={() => setShowmenu('show')}
+          />
         </div>
         <div>Belshaw Cleaning Services</div>
       </div>
