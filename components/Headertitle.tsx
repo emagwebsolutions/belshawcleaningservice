@@ -20,8 +20,9 @@ const Headertitle = () => {
 
   return (
     <div  className="headeer-title">
-        <h1>{res ? res[0]?.title : ''}</h1>
+   
         <div>
+        <h1>{res ? res[0]?.title : ''}</h1>
         {res ? res[0]?.excerpt: ''}
         </div>
       </div>
