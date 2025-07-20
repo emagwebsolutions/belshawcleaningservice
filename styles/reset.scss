@@ -1,0 +1,104 @@
+:root {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.8rem !important;
+  line-height: 2.4rem;
+  font-family: 'Arimo';
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: solid 0.1rem #ccc;
+}
+
+a {
+  text-decoration: none;
+  @extend .text-muted;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  line-height: 4rem;
+  color: #444;
+  opacity: .8;
+}
+
+.btn{
+  width: max-content;
+  border-radius: 2.4rem; 
+  border: solid .1rem #d30923;
+  padding-block: .8rem; 
+  padding-inline: 2.4rem;
+  color: #d30923;
+  margin-top: 1rem;
+  display: block;
+  &:hover{
+    background-color: #d30923;
+    color: white!important;
+  }
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.3rem;
+}
+h4 {
+  font-size: 2.8rem;
+}
+h5 {
+  font-size: 2.3rem;
+}
+
+@media (min-width: 35em) {
+  .container {
+    padding-inline: 5.6rem;
+  }
+}

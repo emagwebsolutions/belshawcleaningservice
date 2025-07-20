@@ -1,0 +1,14 @@
+.laundaryservices{
+  padding-block: 5.6rem;
+  & > div{
+    background-color: white;
+    padding: 5.4rem;
+    width: 60%;
+    border-top-right-radius: 16rem;
+    border-bottom-right-radius: 16rem;
+    box-shadow: 1rem 1rem 2rem rgba(0,0,0, .2);
+    h2{
+      margin-bottom: 2.4rem;
+    }
+  }
+}
