@@ -14,8 +14,21 @@
   }
 }
 
+@media (max-width: 35em) {
+  .iframeContainer {
+    position: relative;
+    overflow: hidden;
 
+    height: 50rem;
 
-@media(max-width: 35em){
-    
+    .iframeContent {
+      width: 100vw;
+      height: 50rem;
+      margin-bottom: 3rem;
+      position: absolute;
+    }
+  }
+}
+[data-elementor-type='footer'] {
+  display: none!important;
 }

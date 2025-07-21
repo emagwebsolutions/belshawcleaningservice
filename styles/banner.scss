@@ -29,7 +29,33 @@
   }
 }
 
-
-
 @media (max-width: 35em) {
+  .banner {
+    height: 60vh;
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: '';
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+
+    .bannertitle {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+      z-index: 3;
+
+      h5 {
+        font-size: 1.6rem;
+      }
+      h5,
+      h2 {
+        color: white;
+      }
+    }
+  }
 }
