@@ -72,7 +72,6 @@ export default function Home() {
         <Slider width="100%" height={getHeight} />
         <Headertitle />
       </section>
-
       <section className="sectiontwo">
         <motion.div className="container" {...variantsProps}>
           <motion.div variants={childVariants}>

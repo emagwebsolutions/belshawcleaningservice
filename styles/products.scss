@@ -1,17 +1,21 @@
+@media (min-width: 35em) {
+  .iframeContainer {
+    position: relative;
+    overflow: hidden;
 
-.iframeContainer{
-position: relative;
-overflow: hidden;
-
-height: 110rem;
-    .iframeContent{
-        width: 100vw;
-        height: 110rem;
-        margin-bottom: 3rem;
-        position: absolute;
-        top: -10rem;
+    height: 110rem;
+    .iframeContent {
+      width: 100vw;
+      height: 110rem;
+      margin-bottom: 3rem;
+      position: absolute;
+      top: -10rem;
     }
-
+  }
 }
 
 
+
+@media(max-width: 35em){
+    
+}

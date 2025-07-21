@@ -1,35 +1,4 @@
-@media (max-width: 35em) {
-  .about {
-    background-color: white;
-    padding: 1.5em;
-    box-shadow: 0.3rem 0.3rem 0.3rem muted(0.2);
-    margin-bottom: 3em;
-    img {
-      width: 100%;
-      border-bottom-left-radius: 8rem;
-    }
-    & > div:nth-of-type(1) {
-      padding-right: 1.5em;
-    }
-    p {
-      font-size: 1.4rem;
-    }
-    ul {
-      list-style-type: circle;
-      font-size: 1.4rem;
-      line-height: 1.7rem;
-      margin-left: 1.2em;
-      margin-bottom: 2em;
-    }
-    h4 {
-      margin-top: -3rem;
-      color: muted();
-    }
-    h1 {
-      color: muted();
-    }
-  }
-}
+
 
 @media (min-width: 35em) {
   .pages {
@@ -53,4 +22,11 @@
       height: 40rem;
     }
   }
+}
+
+
+
+
+@media(max-width: 35em){
+    
 }
